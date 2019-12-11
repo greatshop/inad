@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="thanks/thanks.css">
+    <title>आपके आदेश के लिए धन्यवाद!</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+    <!-- НЕОБХОДИМЫЕ СКРИПТЫ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-url/2.5.3/url.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+
+    <!-- ЗАПИСЬ ПИКСЕЛЯ В COOKIES -->
+    <script>
+        $( function () {
+            if (url( '?pixel' )) Cookies.set( 'pixel', url( '?pixel' ), {expires: 30} );
+        } );
+    </script>
+
+    <script>function getUclick () {
+        var e = document.cookie.match( new RegExp( "(?:^|; )uclick=([^;]*)" ) );
+        return e ? decodeURIComponent( e[ 1 ] ) : void 0
+    }
+
+    function fxOfLnks () {
+        var e = getUclick();
+        if (void 0 === e) return !1;
+        for (var n = document.getElementsByTagName( "a" ), t = 0; t < n.length; t++) {
+            var i = n[ t ].getAttribute( "href" );
+            "string" == typeof i && (-1 == i.indexOf( "&event" ) && -1 == i.indexOf( "?event" ) && -1 == i.indexOf( "?lp=1" ) && -1 == i.indexOf( "?lp=data_upd" ) && -1 == i.indexOf( "?cnv_id=OPTIONAL" ) || (n[ t ].href = i + "&uclick=" + e))
+        }
+    }
+
+    function sendLpPixel () {
+        var e = window.location.search;
+        0 === e.indexOf( "?" ) && (e = e.substr( 1, e.length ));
+        var n = "https://binom122019.dolphin.ru.com/click.php?key=87rju8doxgqezcc0br75&lp_type=pixel" + (e ? "&" + e : ""),
+            t = document.createElement( "script" );
+        t.async = !1, t.src = n, document.head.appendChild( t ), t.onload = function () {
+            window.lp_pixel_wait_flag = !1, "loading" === document.readyState ? (document.addEventListener( "DOMContentLoaded", fxOfLnks ), "function" == typeof window.lp_pixel_callback && document.addEventListener( "DOMContentLoaded", function () {
+                window.lp_pixel_callback( window.tokens )
+            } )) : (fxOfLnks(), "function" == typeof window.lp_pixel_callback && window.lp_pixel_callback( window.tokens ))
+        }
+    }
+
+    sendLpPixel();</script>
+
+</head>
+<body>
+<div class="wrap">
+    <div class="blink"></div>
+    <div class="step1 step2">
+        <h1 class="step1__title">सफलता!</h1>
+        <h2 class="step1__subtitle">आपके ऑर्डर को स्टोर में भेज दिया गया है।</h2>
+    </div>
+</div>
+<img id="pixel" height="1" width="1" style="display:none"
+     src="https://www.facebook.com/tr?id=&ev=Lead&noscript=1"/>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Cookies.js/1.2.1/cookies.min.js"
+        integrity="sha256-A0IFiIp8mIzwj7uUOqpdJC4BY8zUEAtfs/KXcSoe25c=" crossorigin="anonymous"></script>
+
+<script>
+    $( function () {
+        $( 'img#pixel' ).attr( 'src', 'https://www.facebook.com/tr?id=' + Cookies.get( 'pixel' ) + '&ev=Lead&noscript=1' );
+    } )
+</script>
+</body>
+</html>

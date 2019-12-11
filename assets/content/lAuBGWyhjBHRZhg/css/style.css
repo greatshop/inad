@@ -1,0 +1,119 @@
+body{}
+.logo{
+        font-family: 'Amiri', serif;
+	color:red;
+
+}
+footer.page-footer .footer-copyright {
+    overflow: hidden;
+    background-color: rgba(0,0,0,.2);
+    font-size: .9rem;
+    color: rgba(255,255,255,.6);
+}
+@import url(../../../../https@fonts.googleapis.com/css@family=Open+Sans_3A400,800,700,300);
+@import url(../../../../https@fonts.googleapis.com/css@family=Squada+One);
+.container{background}
+body {
+  background: #eee url(../img/extra_clean_paper.png);
+}
+#logo {
+  font-family: 'Open Sans', sans-serif;
+  color: #2d2d2d;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1;
+  text-shadow: #EDEDED 2px 2px 0;
+  position: relative;
+}
+#logo:after {
+  content:"HealthBeauty";
+  position: absolute;
+  left: 10px;
+  top: 12px;
+}
+#logo:after {
+  background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
+  background-size: 4px 4px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: -5;
+  display: block;
+  text-shadow: none;
+}
+.quotenew{background: #f0ffec;
+border-left: 10px solid #0f6;
+padding: 2.5% 1% 0.1%;}
+
+detailBox {
+    width:320px;
+    border:1px solid #bbb;
+    margin:50px;
+}
+.titleBox {
+    background-color:#fdfdfd;
+    padding:10px;
+}
+.titleBox label{
+  color:#444;
+  margin:0;
+  display:inline-block;
+}
+
+.commentBox {
+    padding:10px;
+    border-top:1px dotted #bbb;
+}
+.commentBox .form-group:first-child, .actionBox .form-group:first-child {
+    width:80%;
+}
+.commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
+    width:18%;
+}
+.actionBox .form-group * {
+    width:100%;
+}
+.taskDescription {
+    margin-top:10px 0;
+}
+.commentList {
+    padding:0;
+    list-style:none;
+    overflow:auto;
+}
+.commentList li {
+    margin:0;
+    margin-top:10px;
+background: #f8f8f8;
+padding: 1% 7px;
+border: 2px solid #f0f0f0;
+border-radius: 7px;
+}
+.commentList li > div {
+    display:table-cell;
+
+}
+.commenterImage {
+    width:30px;
+    margin-right:5px;
+    height:100%;
+    float:left;
+}
+.commenterImage img {
+    width:100%;
+    border-radius:50%;
+}
+.commentText p {
+    margin:0;
+}
+.sub-text {
+    color:#aaa;
+    font-family:verdana;
+    font-size:11px;
+}
+.actionBox {
+    border-top:1px dotted #bbb;
+    padding:10px;
+}
