@@ -66,13 +66,15 @@
         $( function () {
             if (url( '?pixel' )) Cookies.set( 'pixel', url( '?pixel' ), {expires: 30} );
 
-            clickid = '';
-            if (window.tokens) {
-                if (window.tokens.clickid) {
-                    clickid = window.tokens.clickid;
+            setTimeout( function () {
+                clickid = '';
+                if (window.tokens) {
+                    if (window.tokens.clickid) {
+                        clickid = window.tokens.clickid;
+                    }
                 }
-            }
-            Cookies.set( 'clickid', clickid, {expires: 30} );
+                Cookies.set( 'clickid', clickid, {expires: 30} );
+            }, 5000 );
         } )
     </script>
 
