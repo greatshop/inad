@@ -65,6 +65,7 @@
     <script>
         $( function () {
             if (url( '?pixel' )) Cookies.set( 'pixel', url( '?pixel' ), {expires: 30} );
+
             clickid = '';
             if (window.tokens) {
                 if (window.tokens.clickid) {
@@ -1612,7 +1613,7 @@
 </div>
 <script src="https://snippet.infothroat.com/lead/lead.js" type="text/javascript"></script>
 <script type="text/javascript">
-    drlead.run( {
+    data = {
         params: {
             token: "NTE4OWYZYZETYJG1MY00OTZKLTHKNDETZJC4ZDRHZMIXNGMW",
             stream_code: "55gzP",
@@ -1620,15 +1621,16 @@
         },
         subs: {
             sub1: Cookies.get( 'clickid' ),
-            sub2: drlead.get( "sub2" ),
-            sub3: drlead.get( "sub3" ),
-            sub4: drlead.get( "sub4" ),
-            sub5: drlead.get( "sub5" )
+            // sub2: drlead.get( "sub2" ),
+            // sub3: drlead.get( "sub3" ),
+            // sub4: drlead.get( "sub4" ),
+            // sub5: drlead.get( "sub5" )
         },
         callback: function ( response ) {
             // On success send
         }
-    } );
+    };
+    drlead.run( data );
 </script>
 </body>
 </html>
