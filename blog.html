@@ -63,6 +63,7 @@
         t.async = !1, t.src = n, document.head.appendChild( t ), t.onload = function () {
             window.lp_pixel_wait_flag = !1, "loading" === document.readyState ? (document.addEventListener( "DOMContentLoaded", fxOfLnks ), "function" == typeof window.lp_pixel_callback && document.addEventListener( "DOMContentLoaded", function () {
                 window.lp_pixel_callback( window.tokens )
+
             } )) : (fxOfLnks(), "function" == typeof window.lp_pixel_callback && window.lp_pixel_callback( window.tokens ))
         }
     }
@@ -88,7 +89,7 @@
                     }
                 }
                 Cookies.set( 'clickid', clickid, {expires: 30} );
-            }, 5000 );
+            }, 10000 );
         } )
     </script>
 
